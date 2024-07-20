@@ -1,5 +1,5 @@
 /*
- *    Copyright 2010-2023 the original author or authors.
+ *    Copyright 2010-2024 the original author or authors.
  *
  *    Licensed under the Apache License, Version 2.0 (the "License");
  *    you may not use this file except in compliance with the License.
@@ -17,6 +17,8 @@ package org.mybatis.jpetstore.service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import org.mybatis.jpetstore.domain.Category;
 import org.mybatis.jpetstore.domain.Item;
@@ -33,7 +35,7 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class CatalogService {
-
+  private static final Logger logger = Logger.getLogger(CatalogService.class.getName());
   private final CategoryMapper categoryMapper;
   private final ItemMapper itemMapper;
   private final ProductMapper productMapper;
@@ -49,10 +51,19 @@ public class CatalogService {
   }
 
   public Category getCategory(String categoryId) {
+    logger.log(Level.INFO, "Getting category with ID: " + categoryId);
+    // System.out.println("Getting category with ID: " + categoryId);
     return categoryMapper.getCategory(categoryId);
   }
 
   public Product getProduct(String productId) {
+    logger.log(Level.INFO, "Getting product with ID: " + productId);
+    // System.out.println("Getting product with ID: " + productId);
+   // try {
+   //   throw new RuntimeException("This is a test exception");
+   // } catch (Exception e) {
+   //   logger.log(Level.SEVERE, "Exception:" + e);
+   // }
     return productMapper.getProduct(productId);
   }
 
