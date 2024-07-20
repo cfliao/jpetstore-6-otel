@@ -1,3 +1,11 @@
+This is a fork from MyBatis JPetStore with otel auto-instrumentation enabled
+ 
+* must run a otel collector before starting this project
+  * download a binary from otel website
+  * an example for running windows otel collector:otelcol-contrib.exe --config=file:config.yaml 
+* mvn cargo:run -P tomcat90
+
+***
 MyBatis JPetStore
 =================
 
