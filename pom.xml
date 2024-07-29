@@ -276,6 +276,8 @@
               <zipUrlInstaller>
                 <url>${cargo.maven.containerUrl}</url>
               </zipUrlInstaller>
+              <log>target/cargo.log</log>
+              <output>target/output.log</output>
             </container>
             <deployables>
               <deployable>

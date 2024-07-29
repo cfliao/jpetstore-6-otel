@@ -59,11 +59,11 @@ public class CatalogService {
   public Product getProduct(String productId) {
     logger.log(Level.INFO, "Getting product with ID: " + productId);
     // System.out.println("Getting product with ID: " + productId);
-   // try {
-   //   throw new RuntimeException("This is a test exception");
-   // } catch (Exception e) {
-   //   logger.log(Level.SEVERE, "Exception:" + e);
-   // }
+    // try {
+    // throw new RuntimeException("This is a test exception");
+    // } catch (Exception e) {
+    // logger.log(Level.SEVERE, "Exception:" + e);
+    // }
     return productMapper.getProduct(productId);
   }
 
